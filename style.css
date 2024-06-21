@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #222;
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background-image: linear-gradient(135deg,#00feba,#5b548a);
+    color: white;
+    /* margin: 100px auto 0; */
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card .searchBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .searchBox input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.card .searchBox button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .searchBox button img{
+    width: 30px;
+}
+.weather .weatherIcon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather .temp{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather .city{
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.weather .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    gap: 20px;
+}
+.weather .details .col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.weather .details .col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.weather .details .col div{}
+.weather .details .col div .humdity,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather .details .col div p:last-of-type{}
+.weather{
+    display: none;
+    transition: 1s;
+}
+.err{
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+    display: none;
+}
+@media screen and (max-width:600px) {
+    .card .searchBox{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .card .searchBox button{
+        display: none;
+    }
+    .weather .details .col div .humdity,.wind{
+        font-size: 19px;
+    }
+    .weather .details .col img{
+        width: 30px;
+    }
+}
